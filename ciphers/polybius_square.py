@@ -1,4 +1,4 @@
-# Polibio square
+# Polybius square
 
 # ┌───┬─────┬─────┬─────┬─────┬─────┐
 # │   │  1  │  2  │  3  │  4  │  5  │
@@ -29,7 +29,7 @@ alphabet_list = [
     ]
 
 
-def encrypt_polibio_square(text_string):
+def encrypt_polybius_square(text_string):
     text_encrypted = ''
     for one_letter in text_string:
         for letter_alphabet_list in alphabet_list:
@@ -39,7 +39,7 @@ def encrypt_polibio_square(text_string):
     return text_encrypted
 
 
-def decrypt_polibio_square(text_numbers):
+def decrypt_polybius_square(text_numbers):
     text_decrypted = ''
     letter_number_list = text_numbers.split(' ')
 

@@ -1,7 +1,7 @@
 from ciphers.atbash import encrypt_atbash, decrypt_atbash
 from ciphers.cesar import encrypt_cesar, decrypt_cesar
 from ciphers.displaced_with_key import encrypt_displaced_with_key, decrypt_displaced_with_key
-from ciphers.polibio_square import encrypt_polibio_square, decrypt_polibio_square
+from ciphers.polybius_square import encrypt_polybius_square, decrypt_polybius_square
 
 
 # atbash(string)
@@ -23,6 +23,6 @@ from ciphers.polibio_square import encrypt_polibio_square, decrypt_polibio_squar
 # print(decrypted_word)
 
 
-print(encrypt_polibio_square('wikipediaenciclopedialibre'))
+print(encrypt_polybius_square('wikipediaenciclopedialibre'))
 print('---------')
-print(decrypt_polibio_square('52 24 25 24 35 15 14 24 11 15 33 13 24 13 31 34 35 15 14 24 11 31 24 12 42 15'))
+print(decrypt_polybius_square('52 24 25 24 35 15 14 24 11 15 33 13 24 13 31 34 35 15 14 24 11 31 24 12 42 15'))
