@@ -1,6 +1,7 @@
 from ciphers.atbash import encrypt_atbash, decrypt_atbash
 from ciphers.cesar import encrypt_cesar, decrypt_cesar
 from ciphers.displaced_with_key import encrypt_displaced_with_key, decrypt_displaced_with_key
+from ciphers.polibio_square import encrypt_polibio_square, decrypt_polibio_square
 
 
 # atbash(string)
@@ -14,13 +15,14 @@ from ciphers.displaced_with_key import encrypt_displaced_with_key, decrypt_displ
 
 
 # encrypt_displaced_with_key(string, key)
-encrypted_word = encrypt_displaced_with_key('holamundo', 'ergo')
-for letter in encrypted_word:
-    print(letter)
-
-print('---------')
+# encrypted_word = encrypt_displaced_with_key('holamundo', 'ergo')
+# print(encrypted_word)
 
 # decrypt_displaced_with_key(string, key)
-decrypted_word = decrypt_displaced_with_key('dmjekulom', 'ergo')
-for letter in decrypted_word:
-    print(letter)
+# decrypted_word = decrypt_displaced_with_key('dmjekulom', 'ergo')
+# print(decrypted_word)
+
+
+print(encrypt_polibio_square('wikipediaenciclopedialibre'))
+print('---------')
+print(decrypt_polibio_square('52 24 25 24 35 15 14 24 11 15 33 13 24 13 31 34 35 15 14 24 11 31 24 12 42 15'))
