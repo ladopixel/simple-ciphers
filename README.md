@@ -5,5 +5,6 @@ As I discover new ones I will try to replicate them in Python.
 * Atbash method
 * Cesar method
 * Displaced with key method
+* Polibio square method
 * ...
 * ...
