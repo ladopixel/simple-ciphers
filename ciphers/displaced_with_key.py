@@ -12,15 +12,17 @@
 # ┌-----┐┌------------------------------------------┐
 # e r g o a b c d f h i j k l m n p q s t u v w x y z
 
-alphabet_list = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+from typing import List
+
+alphabet_list: List = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
                 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 
-def encrypt_displaced_with_key(text_string, one_key):
-    text_string = text_string.lower()
-    text_string_encrypted = ''
-    new_alphabet_list = []
-    positions_in_alphabet = []
+def encrypt_displaced_with_key(text_string: str, one_key: str) -> str:
+    text_string: str = text_string.lower()
+    text_string_encrypted: str = ''
+    new_alphabet_list: List = []
+    positions_in_alphabet: List = []
 
     # I store the key in the new alphabet first.
     # Almaceno primero la clave en el nuevo alfabeto.
@@ -41,16 +43,16 @@ def encrypt_displaced_with_key(text_string, one_key):
     # I select the text positions based on the new alphabet.
     # Selecciono las posiciones del texto basándome en el nuevo alfabeto.
     for position in positions_in_alphabet:
-        text_string_encrypted += new_alphabet_list[position]
+        text_string_encrypted: str = text_string_encrypted + new_alphabet_list[position]
 
     return text_string_encrypted
 
 
-def decrypt_displaced_with_key(text_encrypt, one_key):
-    text_encrypt = text_encrypt.lower()
-    new_alphabet_list = []
-    positions_in_alphabet = []
-    text_string_decrypted = ''
+def decrypt_displaced_with_key(text_encrypt: str, one_key: str) -> str:
+    text_encrypt: str = text_encrypt.lower()
+    text_string_decrypted: str = ''
+    new_alphabet_list: List = []
+    positions_in_alphabet: List = []
     
     # I store the key in the new alphabet first.
     # Almaceno primero la clave en el nuevo alfabeto.
@@ -71,6 +73,6 @@ def decrypt_displaced_with_key(text_encrypt, one_key):
     # I select the text positions based on the new alphabet.
     # Selecciono las posiciones del texto basándome en el nuevo alfabeto.
     for position in positions_in_alphabet:
-        text_string_decrypted += alphabet_list[position]
+        text_string_decrypted: str = text_string_decrypted + alphabet_list[position]
 
     return text_string_decrypted

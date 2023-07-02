@@ -19,8 +19,9 @@
 # Letter i → 24
 # Letter j → 24
 
+from typing import List
 
-alphabet_list = [
+alphabet_list: List = [
     ('a', 11), ('b', 12), ('c', 13), ('d', 14), ('e', 15),
     ('f', 21), ('g', 22), ('h', 23), ('i', 24), ('j', 24), ('k', 25),
     ('l', 31), ('m', 32), ('n', 33), ('o', 34), ('p', 35),
@@ -29,23 +30,23 @@ alphabet_list = [
     ]
 
 
-def encrypt_polybius_square(text_string):
-    text_encrypted = ''
+def encrypt_polybius_square(text_string: str) -> str:
+    text_encrypted: str = ''
     for one_letter in text_string:
         for letter_alphabet_list in alphabet_list:
                 if one_letter == letter_alphabet_list[0]:
-                    text_encrypted += str(f'{letter_alphabet_list[1]} ')
+                    text_encrypted: str = text_encrypted + str(f'{letter_alphabet_list[1]} ')
 
     return text_encrypted
 
 
-def decrypt_polybius_square(text_numbers):
-    text_decrypted = ''
-    letter_number_list = text_numbers.split(' ')
+def decrypt_polybius_square(text_numbers: str):
+    text_decrypted: str = ''
+    letter_number_list: List = text_numbers.split(' ')
 
     for one_letter_number in letter_number_list:
         for letter_alphabet_list in alphabet_list:
              if one_letter_number == str(letter_alphabet_list[1]):
-                text_decrypted += str(letter_alphabet_list[0])
+                text_decrypted: str = text_decrypted + str(letter_alphabet_list[0])
      
     return text_decrypted

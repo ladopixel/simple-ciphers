@@ -8,30 +8,32 @@
 # y → b
 # z → a
 
-alphabet_list = [' ', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+from typing import List
+
+alphabet_list: List = [' ', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
                      'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-reverse_alphabet_list = [' ','z','y','x','w','v','u','t','s','r','q','p','o','n','m',
+reverse_alphabet_list: List = [' ','z','y','x','w','v','u','t','s','r','q','p','o','n','m',
                             'l','k','j','i','h','g','f','e','d','c','b','a']
 
 
-def encrypt_atbash(text_string):
-    text_string = text_string.lower()
-    reverse_string = ''
+def encrypt_atbash(text_string: str) -> str:
+    text_string: str = text_string.lower()
+    reverse_string: str = ''
 
     for one_letter in text_string:
-        position = alphabet_list.index(one_letter)
-        reverse_string += reverse_alphabet_list[position]
+        position: int = alphabet_list.index(one_letter)
+        reverse_string: str = reverse_string + reverse_alphabet_list[position]
 
     return reverse_string
 
 
-def decrypt_atbash(text_string_encrypted):
-    text_string_encrypted = text_string_encrypted.lower()
-    decrypted_string = ''
+def decrypt_atbash(text_string_encrypted: str) -> str:
+    text_string_encrypted: str = text_string_encrypted.lower()
+    decrypted_string: str = ''
     
     for one_letter in text_string_encrypted:
-        position = reverse_alphabet_list.index(one_letter)
-        decrypted_string += alphabet_list[position]
+        position: int = reverse_alphabet_list.index(one_letter)
+        decrypted_string: str = decrypted_string + alphabet_list[position]
 
     return decrypted_string

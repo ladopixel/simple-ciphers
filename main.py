@@ -23,6 +23,6 @@ from ciphers.polybius_square import encrypt_polybius_square, decrypt_polybius_sq
 # print(decrypted_word)
 
 
-print(encrypt_polybius_square('wikipediaenciclopedialibre'))
-print('---------')
-print(decrypt_polybius_square('52 24 25 24 35 15 14 24 11 15 33 13 24 13 31 34 35 15 14 24 11 31 24 12 42 15'))
+# print(encrypt_polybius_square('wikipediaenciclopedialibre'))
+# print('---------')
+# print(decrypt_polybius_square('52 24 25 24 35 15 14 24 11 15 33 13 24 13 31 34 35 15 14 24 11 31 24 12 42 15'))
